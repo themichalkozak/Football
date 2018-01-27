@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.football.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/soccerpitch">
+
+    <LinearLayout
+        android:id="@+id/Team_A_Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true">
+
+
+        <EditText
+            android:id="@+id/leftTeam"
+            android:background="@android:color/transparent"
+            android:minLines="2"
+            android:maxLines="2"
+            android:hint="@string/hintTeamA"
+            style="@style/teamName"/>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRedA"
+            android:layout_width="110dp"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp">
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutYellowA"
+            android:layout_width="115dp"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCornerA"
+            android:layout_width="115dp"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/leftLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/redButtonA"
+                style="@style/button"
+                android:background="@drawable/red_card_button"
+                android:onClick="onClickRedteamA" />
+
+            <Button
+                style="@style/button"
+                android:background="@drawable/yellow_card_button"
+                android:onClick="onClickYellowteamA" />
+
+            <Button
+                style="@style/button"
+                android:background="@drawable/goldencornerleft"
+                android:onClick="onClickCornerteamA" />
+
+            <Button
+                style="@style/footballbutton"
+                android:background="@drawable/goldfootbal"
+                android:onClick="onClickScoreA" />
+
+            <TextView
+                android:id="@+id/procent_possesion_team_A"
+                style="@style/possessionText"
+                android:text="@string/possession" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/score_Team_A"
+            android:text="@string/value_of_score"
+            style="@style/score"/>
+        <TextView
+            android:id="@+id/score_Team_B"
+            android:text="@string/value_of_score"
+            style="@style/score"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Team_B_Layout"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/rightTeam"
+            style="@style/teamName"
+            android:hint="@string/hintTeamA"
+            android:background="@android:color/transparent"
+            android:minLines="2"
+            android:maxLines="2" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRedB"
+            android:layout_width="120dp"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:gravity="end"
+            android:layout_marginEnd="10dp">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutYellowB"
+            android:layout_width="120dp"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCornerB"
+            android:layout_width="120dp"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp">
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <Button
+                style="@style/button"
+                android:background="@drawable/red_card_button"
+                android:onClick="onClickRedteamB"/>
+            <Button
+                style="@style/button"
+                android:background="@drawable/yellow_card_button"
+                android:onClick="onClickYellowteamB"/>
+            <Button
+                style="@style/button"
+                android:background="@drawable/goldencorner"
+                android:onClick="onClickCornerteamB"/>
+            <Button
+                style="@style/footballbutton"
+                android:background="@drawable/goldfootbal"
+                android:onClick="onClickScoreB"/>
+
+            <TextView
+                android:id="@+id/procent_possesion_team_B"
+                style="@style/possessionText"
+                android:text="@string/possession" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:max="100"
+        android:layout_toEndOf="@+id/Team_A_Layout"
+        android:layout_alignBottom="@+id/Team_A_Layout" />
+
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:onClick="onClickShare"
+        android:background="@drawable/share" />
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:onClick="onClickRestart"
+        android:background="@drawable/resetnew" />
+
+
+
+
+</RelativeLayout>
