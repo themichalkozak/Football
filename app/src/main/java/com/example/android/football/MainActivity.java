@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar sb, int progress, boolean fromUser) {
-                valueTextprogressB.setText(String.valueOf(progress + "%"));
-                ValueTextprogressA.setText(String.valueOf((100 - progress) + "%"));
+                valueTextprogressB.setText(String.valueOf(100 - progress) + "%");
+                ValueTextprogressA.setText(String.valueOf(progress + "%"));
                 possession=progress;
             }
 
