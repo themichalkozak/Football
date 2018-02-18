@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">FootballCounte</string>
+    <string name="app_name">Football</string>
     <string name="name_team_A">Manchester United</string>
     <string name="name_team_B">Manchester City</string>
     <string name="hintTeamA">Enter name of team</string>
     <string name="value_of_score">0</string>
     <string name="possession">50%</string>
+    <string name="toast_yellow_card">You get 8 yellow card. GAME OVER</string>
+    <string name="toast_red_card">You get 5 red card. GAME OVER</string>
 
 </resources>

@@ -5,14 +5,15 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.football.MainActivity"
     android:orientation="vertical"
-    android:background="@drawable/soccerpitch">
+    android:background="@drawable/pitchgreen1">
 
     <LinearLayout
         android:id="@+id/Team_A_Layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp">
 
 
         <EditText
@@ -21,6 +22,7 @@
             android:minLines="2"
             android:maxLines="2"
             android:hint="@string/hintTeamA"
+            android:textColorHint="@color/goldColor"
             style="@style/teamName"/>
 
 
@@ -48,23 +50,12 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayoutCornerA"
-            android:layout_width="115dp"
-            android:layout_height="15dp"
-            android:orientation="horizontal"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="20dp">
-
-
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/leftLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="70dp">
 
             <Button
                 android:id="@+id/redButtonA"
@@ -77,10 +68,6 @@
                 android:background="@drawable/yellow_card_button"
                 android:onClick="onClickYellowteamA" />
 
-            <Button
-                style="@style/button"
-                android:background="@drawable/goldencornerleft"
-                android:onClick="onClickCornerteamA" />
 
             <Button
                 style="@style/footballbutton"
@@ -123,13 +110,15 @@
         android:layout_alignParentEnd="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
 
         <EditText
             android:id="@+id/rightTeam"
             style="@style/teamName"
             android:hint="@string/hintTeamA"
             android:background="@android:color/transparent"
+            android:textColorHint="@color/goldColor"
             android:minLines="2"
             android:maxLines="2" />
 
@@ -158,26 +147,15 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayoutCornerB"
-            android:layout_width="120dp"
-            android:layout_height="15dp"
-            android:orientation="horizontal"
-            android:gravity="end"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp">
 
-
-
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/rightLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="start">
+            android:gravity="start"
+            android:layout_marginTop="70dp">
 
             <Button
                 style="@style/button"
@@ -187,10 +165,7 @@
                 style="@style/button"
                 android:background="@drawable/yellow_card_button"
                 android:onClick="onClickYellowteamB"/>
-            <Button
-                style="@style/button"
-                android:background="@drawable/goldencorner"
-                android:onClick="onClickCornerteamB"/>
+
             <Button
                 style="@style/footballbutton"
                 android:background="@drawable/goldfootbal"
@@ -199,11 +174,10 @@
             <TextView
                 android:id="@+id/procent_possesion_team_B"
                 style="@style/possessionText"
+                android:gravity="left"
                 android:text="@string/possession" />
 
         </LinearLayout>
-
-
 
     </LinearLayout>
 
@@ -216,27 +190,36 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:max="100"
-        android:layout_toEndOf="@+id/Team_A_Layout"
+        android:layout_centerInParent="true"
         android:layout_alignBottom="@+id/Team_A_Layout" />
 
-    <Button
-        android:id="@+id/share_button"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignEnd="@+id/linearLayout"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:onClick="onClickShare"
-        android:background="@drawable/share" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true">
 
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignStart="@+id/linearLayout"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:onClick="onClickRestart"
-        android:background="@drawable/resetnew" />
+        <Button
+            android:id="@+id/share_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="25dp"
+            android:onClick="onClickShare"
+            android:background="@drawable/share" />
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="onClickRestart"
+            android:background="@drawable/resetnew" />
+
+
+
+    </LinearLayout>
+
 
 
 
