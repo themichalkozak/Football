@@ -174,7 +174,7 @@
             <TextView
                 android:id="@+id/procent_possesion_team_B"
                 style="@style/possessionText"
-                android:gravity="left"
+                android:gravity="start"
                 android:text="@string/possession" />
 
         </LinearLayout>
