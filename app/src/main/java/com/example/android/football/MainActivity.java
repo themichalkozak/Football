@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             quantityRedCardA+=1;
         }
 
-        if(quantityRedCardA > 3) {
+        if(quantityRedCardA > 4) {
 
             Context context = getApplicationContext();
             CharSequence text = getResources().getString(R.string.toast_red_card);
@@ -131,12 +131,12 @@ public class MainActivity extends AppCompatActivity {
     public void onClickRedteamB(View v) {
 
 
-        if(quantityRedCardB <=3) {
+        if(quantityRedCardB <=4) {
             linearLayoutRedB.addView(createNewImageViewRedB());
             quantityRedCardB+=1;
         }
 
-        if (quantityRedCardB >3) {
+        if (quantityRedCardB >4) {
 
             Context context = getApplicationContext();
             CharSequence text = getResources().getString(R.string.toast_red_card);
